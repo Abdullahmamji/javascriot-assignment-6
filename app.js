@@ -155,7 +155,143 @@ document.write(Math.round( +d ) + " days have passed since 18 June,2015");
 document.write ("<br>");
 document.write ("<br>");
 
+var No_of_units = 410;
+var Charges_per_unit  = 16;
+var late_payment = 350
 
+document.write("Customer Name:"+ " "+"ABC");
+document.write("<br>");
+document.write("Month:"+ " " + months$[current_months]) ;
+
+document.write("<br>");
+
+document.write("No.of Units:"+ " "+ "410");
+document.write("<br>");
+
+document.write("Charges per Unit:"+ " "+ "16");
+
+document.write("<br>");
+
+document.write("Net Amount Payable (Within Due Date):"+ " "+ (No_of_units*Charges_per_unit));
+
+
+document.write("<br>");
+
+document.write("Late Payment surcharge:" +" " + late_payment);
+
+
+document.write("<br>");
+
+document.write("Gross Amount Payable (after Due Date):"+ "" + (No_of_units*Charges_per_unit+late_payment));
+
+document.write("<br>");
+document.write("<br>");
+
+var ramadan1 = new Date();
+var ramadan2 = new Date("06-18-2015");
+
+var ramadan1_time = ramadan1.getTime();
+var ramadan2_time = ramadan2.getTime();
+
+var past_days = ramadan1-ramadan2;
+
+var days_ = past_days/(1000*60*60*24);
+document.write(Math.floor(days_)+ " " + "days have passed since 1st Ramadan,2015");
+
+document.write("<br>");
+document.write("<br>");
+
+
+
+// FUNCTION
+
+function greets(fist_name,last_name){
+    document.write("Hello"+""+ fist_name + last_name ,"<br>")
+
+}
+greets("Sufyan","Sohail");
+
+function telltime(){
+    var now = new Date();
+    document.write(now,"<br>","<br>");
+}
+telltime();
+
+function add(){
+    var a = +prompt("Input 1st No");
+    var b = +prompt("Input 2nd No.");
+    alert(a+b);
+    
+}
+add();
+
+function calculate (no_1,no_2,operators){
+    var First_no = no_1;
+    var second_no = no_2;
+    var total = First_no+second_no;
+    document.write(total);
+}
+calculate(10,20, "-");
+
+var latter = prompt("Enter Word");
+var capital_latter = latter.toUpperCase();
+
+alert(capital_latter);
+
+var latter$ = prompt("Enter Any Word i'll Show You last character of this word");
+var last_latter = latter$.charAt();
+
+alert(last_latter);
+ 
+var user$ = prompt("Enter Your Name");
+
+if(user$ === "!"|| "@"||"$"){
+    alert("Enter Valid User Name")
+}else{
+    alert("Correct")
+
+}
+
+document.write("<br>");
+
+var number1 = Math.round(3.45214);
+var number2 = Math.floor(3.45214);
+var number3 = Math.ceil(3.45214);
+
+document.write(number1);
+document.write("<br>");
+
+
+document.write(number2);
+document.write("<br>");
+
+
+document.write(number3);
+document.write("<br>");
+document.write("<br>");
+
+ var random_no = Math.random();
+// console.log(random_no);
+var random_no = random_no*2;
+
+var toss = Math.ceil(random_no);
+console.log(toss);
+
+if(toss== ("1")){
+    alert("Head");
+}
+else if(toss == ("2")){
+    alert("Tail");
+}
+
+var secret_no = 7;
+var ask = +prompt("Input one No from 1 to 10");
+
+if (ask === secret_no){
+    alert("Congratulations You Win")
+}else{
+    alert("You Lost")
+}
 
 
 
